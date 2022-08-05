@@ -38,7 +38,9 @@ class DeliveryTest {
         $("[data-test-id='phone'] input").setValue(validUser.getPhone());
         $("[data-test-id='agreement']").click();
         $x("//span[@class='button__text']").click();
-        $("[data-test-id='success-notification']").shouldBe(visible);
+        $("[data-test-id='success-notification']")
+                .shouldBe(visible)
+                .shouldHave(Condition.text("Встреча успешно запланирована на " + firstMeetingDate));
 
         $("[data-test-id='date'] input").sendKeys(Keys.CONTROL + "A");
         $("[data-test-id='date'] input").sendKeys(Keys.BACK_SPACE);
