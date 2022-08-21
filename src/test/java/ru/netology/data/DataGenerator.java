@@ -10,6 +10,7 @@ import java.util.Locale;
 public class DataGenerator {
 
     private static final Faker faker = new Faker(new Locale("ru"));
+
     private DataGenerator() {
     }
 
